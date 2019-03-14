@@ -1,0 +1,7 @@
+.cv-list p:first-child {
+  margin: 20px 0 0;
+}
+
+.cv-list p {
+  margin: 0;
+}

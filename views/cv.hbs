@@ -1,0 +1,149 @@
+<nav class="light-blue lighten-1" role="navigation">
+  <div class="nav-wrapper container"><img id = "logo-container" src="https://www.iconsdb.com/icons/preview/orange/linkedin-4-xxl.png" height="65px" href="#" class="brand-logo"></img><!--<a id="logo-container" href="#" class="brand-logo"><\insert logo here\></a>-->
+
+    <ul class="right hide-on-med-and-down">
+      <li><a href="/">/home</a></li>
+      <li><a href="/cv.html">/cv</a></li>
+      <li><a href="/data">/data</a></li>
+    </ul>
+
+    <ul id="nav-mobile" class="sidenav">
+      <li><a href="#">Navbar Link</a></li>
+    </ul>
+    <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  </div>
+</nav>
+
+
+
+<div class="container">
+  <div class="section">
+
+    <!--   Icon Section   -->
+    <div class="row">
+      <div class="col m2">
+      </div>
+      <div class="col m2">
+        <h5 class = "right">Biography</h5>
+      </div>
+      <div class="col m6">
+        <div class="icon-block cv-list">
+          <p class="light">{{person.firstname}} {{person.lastname}}</p>
+          <p class="light">{{person.birtdate}}</p>
+          <p class="light">{{person.email}}</p>
+          <p class="light">{{person.address.0.city}} {{person.address.0.country}}</p>
+        </div>
+      </div>
+      <div class="col m2">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col m12">
+        <div class="icon-block">
+          <p class = "center">Our site aims to present you in the best possible way.
+            We make you look good with minimal effort, and we guarantee that
+            employers will offer you attractive positions!</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col m2">
+          </div>
+          <div class="col m2">
+            <h5 class = "right">Experience</h5>
+          </div>
+          <div class="col m6">
+            <div class="icon-block cv-list">
+              {{#each person.experience}}
+              <p class="light">{{this.employer}}</p>
+              <p class="light">{{this.title}}</p>
+              <p class="light">{{this.startdate}} - {{this.enddate}}</p>
+              <br>
+              {{/each}}
+            </div>
+          </div>
+          <div class="col m2">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col m2">
+          </div>
+          <div class="col m2">
+            <h5 class = "right">Education</h5>
+          </div>
+          <div class="col m6">
+            <div class="icon-block cv-list">
+              {{#each person.education}}
+              <p class="light">{{this.school}}</p>
+              <p class="light">{{this.program}}</p>
+              <p class="light">{{this.degree}}</p>
+              <p class="light">{{this.startdate}} - {{this.graduated}}</p>
+              <br>
+              {{/each}}
+            </div>
+          </div>
+          <div class="col m2">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col m2">
+          </div>
+          <div class="col m2">
+            <h5 class = "right">Qualifications</h5>
+          </div>
+          <div class="col m6">
+            <div class="icon-block cv-list">
+              {{#each person.qualifications}}
+              <p class="light">{{this}}</p>
+              {{/each}}
+            </div>
+          </div>
+          <div class="col m2">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col m2">
+          </div>
+          <div class="col m2">
+            <h5 class = "right">Portfolio</h5>
+          </div>
+          <div class="col m6">
+            <div class="icon-block cv-list">
+              <p class="light">{{person.links.0.linkedin}}</p>
+              <p class="light">{{person.links.0.github}}</p>
+            </div>
+          </div>
+          <div class="col m2">
+          </div>
+        </div>
+      </div>
+      <br><br>
+    </div>
+  </div>
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">About inCV</h5>
+          <p class="grey-text text-lighten-4">We are a team of three colleagues working on this project.
+            Our background is vastly different, and our competences differs as well.</p>
+
+
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Developers</h5>
+            <ul>
+              <li><a class="white-text" href="mailto:quoc.viet.nguyen.tran@no.experis.com">Quoc Viet Nguyen Tran</a></li>
+              <li><a class="white-text" href="mailto:thinh.ho@no.experis.com">Thinh To</a></li>
+              <li><a class="white-text" href="mailto:kim.aasen@no.experis.com">Kim Aasen</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          Copyright <a class="orange-text text-lighten-3" href="http://www.incv.com">inCV.com</a>
+        </div>
+      </div>
+    </footer>
