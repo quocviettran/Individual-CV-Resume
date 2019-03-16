@@ -4,11 +4,15 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const fs = require('fs');
+const hbs = require("hbs");
 
 const rawData = fs.readFileSync('person.json');
 
 const indexRouter = require('./routes/index');
 const cvRouter = require('./routes/cv');
+
+hbs.registerPartial({ footer: require('./views/footer') });
+hbs.registerPartial({ nav: require("./views/nav") });
 
 const app = express();
 
@@ -29,6 +33,7 @@ app.use('/cv', cvRouter);
 app.get("/data", (req, res) => {
   res.json(JSON.parse(rawData));
 });
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
