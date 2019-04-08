@@ -1,4 +1,4 @@
-# Task24
+# Induvidial version of Task24
 CV/Resume Javascript
 Wokk Tran
 Kim Aasen
